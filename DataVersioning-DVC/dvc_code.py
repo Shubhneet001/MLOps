@@ -2,23 +2,24 @@ import pandas as pd
 import os
 
 # Create a sample DataFrame with column names
-data = {'Name': ['Alice', 'Bob', 'Charlie'],
-    'Age': [25, 30, 35],
-    'City': ['New York', 'Los Angeles', 'Chicago']
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'GF1', 'GF2'],
+    'Age': [25, 30, 35, 20, 30],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'City1', 'City2']
     }
 
 df = pd.DataFrame(data)
 
-# # Adding new row to df for V2
-new_row_loc = {'Name': 'GF1', 'Age': 20, 'City': 'City1'}
+
+# Adding new row to df for V2
+new_row_loc = {'Name': 'Mark', 'Age': 21, 'City': 'San Francisco'}
 df.loc[len(df.index)] = new_row_loc
 
-# # Adding new row to df for V3
-new_row_loc2 = {'Name': 'GF2', 'Age': 30, 'City': 'City2'}
-df.loc[len(df.index)] = new_row_loc2
+# Adding new row to df for V3
+# new_row_loc2 = {'Name': 'Emma', 'Age': 24, 'City': 'Vegas'}
+# df.loc[len(df.index)] = new_row_loc2
 
 # Ensure the "data" directory exists at the root level
-data_dir = 'DataVersioning-DVC/data'
+data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
 
 # Define the file path
