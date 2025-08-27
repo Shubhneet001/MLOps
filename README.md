@@ -1,2 +1,2 @@
-# MLOps
-This repo contains all the things i had learned in the MLOps during my learning phase
+# MLOps-Data Versioning-DVC
+Contains the understanding of Data Versioning through DVC
